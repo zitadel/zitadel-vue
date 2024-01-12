@@ -14,8 +14,7 @@ jobs:
         with:
           node-version: 18
       - run: yarn build
-        with:
-          working_directory: ./lib
+        working-directory: ./lib
       - name: semantic release
         uses: cycjimmy/semantic-release-action@v3
         with:

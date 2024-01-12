@@ -1,0 +1,16 @@
+{
+  "name": "zitadel-vue",
+  "version": "1.0.0",
+  "description": "Wraps vue-oidc-client to provide a simple interface for ZITADEL",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "vue-oidc-client": "^1.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

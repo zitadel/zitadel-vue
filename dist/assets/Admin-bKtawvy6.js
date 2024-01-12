@@ -1,0 +1,1 @@
+import{_ as e,o,c as s,a as t}from"./index-lB7MEtne.js";const a={},c={class:"admin"},n=t("h1",null,' This is an administrator page. You can see it because you have the role "admin" in your ZITADEL project. ',-1),r=[n];function i(_,d){return o(),s("div",c,r)}const l=e(a,[["render",i]]);export{l as default};

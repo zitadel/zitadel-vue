@@ -1,0 +1,23 @@
+name: Release @zitadel/vue package
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  release:
+    name: build and release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: yarn build
+      - name: semantic release
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          working_directory: ./lib
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

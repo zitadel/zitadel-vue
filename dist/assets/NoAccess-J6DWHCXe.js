@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o,a as c}from"./index-lB7MEtne.js";const a={},s={class:"admin"},n=c("h1",null," You directed navigated to this page, but you aren't authenticated or don't have the admin role in your ZITADEL project. ",-1),r=[n];function d(_,i){return t(),o("div",s,r)}const u=e(a,[["render",d]]);export{u as default};

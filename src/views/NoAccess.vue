@@ -5,7 +5,7 @@
       Access denied
     </h1>
     <h2>
-      You don't have the admin role in your ZITADEL project.
+      You don't have the role "admin" in your ZITADEL project.
     </h2>
     </div>
   </div>

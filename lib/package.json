@@ -1,12 +1,29 @@
 {
-  "name": "zitadel-vue",
-  "version": "1.0.0",
+  "name": "@zitadel/vue",
+  "version": "0.0.0-development",
   "description": "Wraps vue-oidc-client to provide a simple interface for ZITADEL",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "ZITADEL",
+    "Vue",
+    "Vue3",
+    "authN",
+    "authZ",
+    "OIDC",
+    "IAM"
+  ],
   "files": [
     "/dist"
   ],
+  "author": "Elio Bischof, <elio@zitadel.com>",
+  "license": "MIT",
   "dependencies": {
     "vue-oidc-client": "^1.0.0-alpha.5"
   },

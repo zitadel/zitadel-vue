@@ -1,4 +1,4 @@
-import {createZITADELAuth} from "zitadel-vue";
+import {createZITADELAuth} from "@zitadel/vue";
 import {User} from "oidc-client";
 
 const zitadelAuth = createZITADELAuth({

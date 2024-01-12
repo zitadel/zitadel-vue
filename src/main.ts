@@ -20,4 +20,4 @@ zitadelAuth.oidcAuth.startup().then(ok => {
     } else {
         console.error('Startup was not ok')
     }
-}).catch(console.error)
+})

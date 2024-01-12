@@ -2,9 +2,9 @@ import { createOidcAuth, SignInType, LogLevel } from 'vue-oidc-client/vue3'
 import { UserManagerSettings, Logger } from 'oidc-client'
 
 export interface ZITADELConfig {
-    projectResourceID?: string
     client_id: string
     issuer: string
+    project_resource_id?: string
 }
 
 export function createZITADELAuth(
@@ -20,8 +20,8 @@ export function createZITADELAuth(
     const cfg: UserManagerSettings = {
         response_type: 'code',
         scope: 'openid profile email offline_access' +
-            (zitadelConfig.projectResourceID ?
-            ` urn:zitadel:iam:org:project:id:${zitadelConfig.projectResourceID}:aud` +
+            (zitadelConfig.project_resource_id ?
+            ` urn:zitadel:iam:org:project:id:${zitadelConfig.project_resource_id}:aud` +
             ' urn:zitadel:iam:org:projects:roles'
             : ''),
         authority: zitadelConfig.issuer,
@@ -45,10 +45,10 @@ export function createZITADELAuth(
     return {
         oidcAuth,
         hasRole: (role: string) => {
-            if (!zitadelConfig.projectResourceID) {
+            if (!zitadelConfig.project_resource_id) {
                 throw new Error('projectResourceID is required for hasRole')
             }
-            const roles = oidcAuth.userProfile[`urn:zitadel:iam:org:project:${zitadelConfig.projectResourceID}:roles`] as Array<any>
+            const roles = oidcAuth.userProfile[`urn:zitadel:iam:org:project:${zitadelConfig.project_resource_id}:roles`] as Array<any>
             if (!roles) {
                 return false
             }

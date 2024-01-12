@@ -2,7 +2,7 @@ import {createZITADELAuth} from "zitadel-vue";
 import {User} from "oidc-client";
 
 const zitadelAuth = createZITADELAuth({
-    projectResourceID: '249118459256900146',
+    project_resource_id: '249118459256900146',
     client_id: "249118590152804914@vue_example",
     issuer: "http://localhost:8080/",
 })

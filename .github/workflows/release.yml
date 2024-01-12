@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+      - run: yarn
+        working-directory: ./lib
       - run: yarn build
         working-directory: ./lib
       - name: semantic release

@@ -1,4 +1,4 @@
-# ZITADEL Vue Integration
+# ZITADEL Vue SDK
 
 Authenticate your [ZITADEL](https://zitadel.com) users within your Vue applications.
 

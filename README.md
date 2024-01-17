@@ -1,4 +1,4 @@
-# @zitadel/vue SDK and Example
+# @zitadel/vue Example
 
 Authenticate your [ZITADEL](https://zitadel.com) users within your Vue applications.
 
@@ -23,9 +23,9 @@ The following pages are added to the scaffolded example application:
 The following files are added or modified to enable ZITADEL authentication:
 - *src/router/index.ts*: The routes are protected using the meta field *authName* and conditional lazy loading.
 - *src/App.vue*: The navigation bar is conditionally rendered depending on the authentication state.
-- *src/services/zitadelAuth.ts*: The [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) library is configured.
+- *src/services/zitadelAuth.ts*: The [@zitadel/vue SDK](https://www.npmjs.com/package/@zitadel/vue) is configured.
 - The file *src/main.ts* shows how the Vue application is bootstrapped with ZITADEL auth support.
-- The folder *./lib* contains the [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) library.
+- The folder *./lib* contains the [@zitadel/vue SDK](https://www.npmjs.com/package/@zitadel/vue).
 
 ## Features
 

@@ -7,7 +7,7 @@ Authenticate your [ZITADEL](https://zitadel.com) users within your Vue applicati
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 
 > [!IMPORTANT]
-> If you want to try out @zitadel/vue, read the [ZITADEL step-by-step guide for Vue](https://zitadel.com/docs/examples/login/vue).
+> If you want to try out [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue), read the [ZITADEL step-by-step guide for Vue](https://zitadel.com/docs/examples/login/vue).
 > It shows how to get the *client_id* and the *project_resource_id* from ZITADEL and how to wire everything up in Vue.
 
 ## Project Structure
@@ -23,20 +23,20 @@ The following pages are added to the scaffolded example application:
 The following files are added or modified to enable ZITADEL authentication:
 - *src/router/index.ts*: The routes are protected using the meta field *authName* and conditional lazy loading.
 - *src/App.vue*: The navigation bar is conditionally rendered depending on the authentication state.
-- *src/services/zitadelAuth.ts*: The @zitadel/vue library is configured.
+- *src/services/zitadelAuth.ts*: The [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) library is configured.
 - The file *src/main.ts* shows how the Vue application is bootstrapped with ZITADEL auth support.
-- The folder *./lib* contains the @zitadel/vue library.
+- The folder *./lib* contains the [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) library.
 
 ## Features
 
-The NPM package @zitadel/vue wraps the NPM package [vue-oidc-client](https://github.com/soukoku/vue-oidc-client).
+The NPM package [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) wraps the NPM package [vue-oidc-client](https://github.com/soukoku/vue-oidc-client).
 All [vue-oidc-client](https://github.com/soukoku/vue-oidc-client) features are available and the whole configuration can be overridden.
 
 The following features are added to [vue-oidc-client](https://github.com/soukoku/vue-oidc-client)
 
-- @zitadel/vue defaults as much configuration as possible.
-- @zitadel/vue provides a simple way to check for user roles.
-- An example application is provided to show how to use @zitadel/vue.
+- [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) defaults as much configuration as possible.
+- [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) provides a simple way to check for user roles.
+- An example application is provided to show how to use [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue).
 
 The following is an example for a minimal OIDC configuration:
 

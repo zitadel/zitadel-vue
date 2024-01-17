@@ -13,13 +13,13 @@ Authenticate your [ZITADEL](https://zitadel.com) users within your Vue applicati
 
 ## Features
 
-The NPM package @zitadel/vue wraps the NPM package [vue-oidc-client](https://github.com/soukoku/vue-oidc-client).
+The NPM package [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) wraps the NPM package [vue-oidc-client](https://github.com/soukoku/vue-oidc-client).
 All [vue-oidc-client](https://github.com/soukoku/vue-oidc-client) features are available and the whole configuration can be overridden.
 
 The following features are added to [vue-oidc-client](https://github.com/soukoku/vue-oidc-client)
 
-- @zitadel/vue defaults as much configuration as possible.
-- @zitadel/vue provides a simple way to check for user roles.
+- [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) defaults as much configuration as possible.
+- [@zitadel/vue](https://www.npmjs.com/package/@zitadel/vue) provides a simple way to check for user roles.
 
 The following is an example for a minimal OIDC configuration:
 

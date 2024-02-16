@@ -4,6 +4,8 @@ updates:
     directory: "/"
     commit-message:
       prefix: "chore"
+    schedule:
+      interval: "weekly"
     groups:
       example:
         patterns:
@@ -18,6 +20,8 @@ updates:
         - "*"
         update-types:
         - "patch"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "npm"
     directory: "/lib"
     commit-message:
@@ -29,3 +33,5 @@ updates:
         update-types:
         - "major"
         - "minor"
+    schedule:
+      interval: "daily"

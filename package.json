@@ -13,7 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@zitadel/vue": "link:./lib",
+    "@zitadel/vue": "^1.0.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },

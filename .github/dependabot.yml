@@ -18,20 +18,5 @@ updates:
       lib:
         patterns:
         - "*"
-        update-types:
-        - "patch"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "npm"
-    directory: "/lib"
-    commit-message:
-      prefix: "feat"
-    groups:
-      lib:
-        patterns:
-        - "*"
-        update-types:
-        - "major"
-        - "minor"
     schedule:
       interval: "daily"

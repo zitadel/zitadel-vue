@@ -10,6 +10,9 @@ updates:
       example:
         patterns:
         - "*"
+    reviewers:
+      - peintnermax
+      - eliobischof
   - package-ecosystem: "npm"
     directory: "/lib"
     commit-message:
@@ -20,3 +23,6 @@ updates:
         - "*"
     schedule:
       interval: "daily"
+    reviewers:
+      - peintnermax
+      - eliobischof

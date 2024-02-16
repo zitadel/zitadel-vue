@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    commit-message:
+      prefix: "chore"
+    schedule:
+      interval: "weekly"
+    groups:
+      example:
+        patterns:
+        - "*"
+    reviewers:
+      - peintnermax
+      - eliobischof
+  - package-ecosystem: "npm"
+    directory: "/lib"
+    commit-message:
+      prefix: "fix"
+    groups:
+      lib:
+        patterns:
+        - "*"
+    schedule:
+      interval: "daily"
+    reviewers:
+      - peintnermax
+      - eliobischof

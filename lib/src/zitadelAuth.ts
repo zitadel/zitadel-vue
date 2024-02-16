@@ -31,8 +31,6 @@ export function createZITADELAuth(
         ...oidcConfig, // everything can be overridden!
     }
 
-    console.info('OIDC Config', cfg)
-
     const oidcAuth =  createOidcAuth(
         authName,
         defaultSignInType,

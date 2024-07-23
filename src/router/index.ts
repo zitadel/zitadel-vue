@@ -21,7 +21,7 @@ const router = createRouter({
       meta: {
         authName: zitadelAuth.oidcAuth.authName
       },
-      component: () => import('../views/Login.vue')
+      component: () => import('../views/LoginView.vue')
     },
     {
       path: '/admin',
@@ -31,9 +31,9 @@ const router = createRouter({
       },
       component: () => {
         if (zitadelAuth.hasRole("admin")) {
-          return import('../views/Admin.vue')
+          return import('../views/AdminView.vue')
         }
-        return import('../views/NoAccess.vue')
+        return import('../views/NoAccessView.vue')
       },
     }
   ]

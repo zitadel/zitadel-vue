@@ -1,9 +1,10 @@
-import {createZITADELAuth} from "@zitadel/vue";
-import {User} from "oidc-client";
+import { createZITADELAuth } from "@zitadel/vue";
+import { User } from "oidc-client";
+import type { OidcAuth } from 'vue-oidc-client/vue3';
 
-const zitadelAuth = createZITADELAuth({
-    project_resource_id: '249118459256900146',
-    client_id: "249118590152804914@vue_example",
+const zitadelAuth: { oidcAuth: OidcAuth; hasRole: (role: string) => any } = createZITADELAuth({
+    project_resource_id: '277221006874026147',
+    client_id: "277221059168673955",
     issuer: "http://localhost:8080/",
 })
 

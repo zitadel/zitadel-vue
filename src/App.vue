@@ -5,17 +5,38 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    >
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/admin" v-if="$zitadel.hasRole('admin')">Admin</RouterLink>
-        <a href="#" @click.prevent="$zitadel.oidcAuth.signOut" v-if="$zitadel.oidcAuth.isAuthenticated">Signout</a>
+        <RouterLink to="/">
+          Home
+        </RouterLink>
+        <RouterLink to="/about">
+          About
+        </RouterLink>
+        <RouterLink to="/login">
+          Login
+        </RouterLink>
+        <RouterLink
+          v-if="$zitadel.hasRole('admin')"
+          to="/admin"
+        >
+          Admin
+        </RouterLink>
+        <a
+          v-if="$zitadel.oidcAuth.isAuthenticated"
+          href="#"
+          @click.prevent="$zitadel.oidcAuth.signOut"
+        >Signout</a>
       </nav>
     </div>
   </header>

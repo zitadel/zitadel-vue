@@ -45,6 +45,7 @@ const zitadelAuth = createZITADELAuth({
    issuer: `${myZITADELInstancesOrigin}`,
    client_id: `${myApplicationsClientID}`,
    project_resource_id: `${myApplicationsProjectResourceID}`,
+   organization_id: `${myApplicationsOrganizationID}`, // optional
 })
 ```
 

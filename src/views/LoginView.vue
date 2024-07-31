@@ -9,9 +9,11 @@
       </h2>
       <p>
         <ul class="claims">
-          <li v-for="c in claims" :key="c.key">
-            <strong>{{ c.key }}</strong
-            >: {{ c.value }}
+          <li
+            v-for="c in claims"
+            :key="c.key"
+          >
+            <strong>{{ c.key }}</strong>: {{ c.value }}
           </li>
         </ul>
       </p>
@@ -19,15 +21,6 @@
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .userinfo {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
 <script lang="ts">
 import {defineComponent} from "vue";
 
@@ -48,3 +41,12 @@ export default defineComponent({
   }
 });
 </script>
+<style>
+@media (min-width: 1024px) {
+  .userinfo {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+</style>

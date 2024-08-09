@@ -56,6 +56,9 @@ The following defaults apply:
 - If you specify a *project_resource_id*, the scopes for retrieving the users roles from the user info endpoint are added automatically.
 You can conveniently use `zitadelAuth.hasRole("someRoleKey")`.
 
+Optional;
+- add an *organization_id* to register and login users directly in the organization scope.
+
 ## Running the Example
 
 ### Recommended IDE Setup

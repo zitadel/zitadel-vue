@@ -5,6 +5,7 @@ export interface ZITADELConfig {
     client_id: string
     issuer: string
     project_resource_id?: string
+    org_id?: string
 }
 
 export function createZITADELAuth(
@@ -23,7 +24,8 @@ export function createZITADELAuth(
             (zitadelConfig.project_resource_id ?
             ` urn:zitadel:iam:org:project:id:${zitadelConfig.project_resource_id}:aud` +
             ' urn:zitadel:iam:org:projects:roles'
-            : ''),
+            : '')
+            + (zitadelConfig.org_id ? ` urn:zitadel:iam:org:id:${zitadelConfig.org_id}` : ''),
         authority: zitadelConfig.issuer,
         client_id: zitadelConfig.client_id,
         loadUserInfo: true,

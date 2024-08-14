@@ -595,10 +595,10 @@
   resolved "https://registry.yarnpkg.com/@vue/tsconfig/-/tsconfig-0.5.1.tgz#3124ec16cc0c7e04165b88dc091e6b97782fffa9"
   integrity sha512-VcZK7MvpjuTPx2w6blwnwZAu5/LgBUtejFOi3pPGQFXQN5Ela03FUtd2Qtg4yWGGissVL0dr6Ro1LfOFh+PCuQ==
 
-"@zitadel/vue@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@zitadel/vue/-/vue-1.0.4.tgz#66986bb4b8363e8a3093d2a5a7b9fceabdb7b824"
-  integrity sha512-JQhwsC97k6jvZ+JVT8ExXHYd10Ct3T+8CbPlKrdbi37VCZHEH3QShqQ9XCtZ/hiWgiSEtk7kX2aHNSmttZTnxA==
+"@zitadel/vue@latest":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@zitadel/vue/-/vue-1.1.0.tgz#b00e9f0b09f0a8cfb76084a8208c093c26ba3e7b"
+  integrity sha512-8Z1LOe9rmIfzuOGqIzpHy+tywhih8CveBamO2h01+f6oMaxPJILVkCimFUmmO4gfUV/IvRmtK6h7auffnhL9kg==
   dependencies:
     vue-oidc-client "^1.0.0-alpha.5"
 

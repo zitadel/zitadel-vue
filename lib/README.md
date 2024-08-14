@@ -28,6 +28,7 @@ const zitadelAuth = createZITADELAuth({
    issuer: `${myZITADELInstancesOrigin}`,
    client_id: `${myApplicationsClientID}`,
    project_resource_id: `${myApplicationsProjectResourceID}`,
+   organization_id: `${myApplicationsOrganizationID}`, // optional
 })
 ```
 
@@ -37,3 +38,6 @@ The following defaults apply:
 - The access token is refreshed automatically by default before it expires.
 - If you specify a *project_resource_id*, the scopes for retrieving the users roles from the user info endpoint are added automatically.
   You can conveniently use `zitadelAuth.hasRole("someRoleKey")`.
+
+Optional:
+- add an organization_id to register and login users directly in the organization scope.

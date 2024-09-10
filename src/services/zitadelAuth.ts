@@ -3,9 +3,9 @@ import { User } from "oidc-client";
 import type { OidcAuth } from 'vue-oidc-client/vue3';
 
 const zitadelAuth: { oidcAuth: OidcAuth; hasRole: (role: string) => any } = createZITADELAuth({
-    project_resource_id: '277221006874026147',
-    client_id: "277221059168673955",
-    issuer: "http://localhost:8080/",
+    project_resource_id: import.meta.env.VITE_ZITADEL_PROJECT_RESOURCE_ID,
+    client_id: import.meta.env.VITE_ZITADEL_CLIENT_ID,
+    issuer: import.meta.env.VITE_ZITADEL_ISSUER,
 })
 
 // handle events

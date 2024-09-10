@@ -400,3 +400,6 @@ FodyWeavers.xsd
 
 # JetBrains IDEA
 .idea
+
+# Local Environment Variables
+.env.local

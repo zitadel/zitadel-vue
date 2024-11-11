@@ -52,7 +52,13 @@ export function createZITADELAuth(
             if (!roles) {
                 return false
             }
-            return roles.find(r => r[role])
+            
+            if (Array.isArray(roles)) {
+                return roles.find(r => r[role]);
+            } else {
+                return Object.keys(roles).some(key => key === role);
+            }
+
         }
     }
 }

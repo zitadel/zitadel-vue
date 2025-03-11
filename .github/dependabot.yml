@@ -12,7 +12,7 @@ updates:
         - "*"
     reviewers:
       - peintnermax
-      - eliobischof
+      - skewis6
   - package-ecosystem: "npm"
     directory: "/lib"
     commit-message:
@@ -25,4 +25,4 @@ updates:
       interval: "daily"
     reviewers:
       - peintnermax
-      - eliobischof
+      - skewis6

@@ -48,13 +48,13 @@ export function createZITADELAuth(
             if (!zitadelConfig.project_resource_id) {
                 throw new Error('projectResourceID is required for hasRole')
             }
-            const roles = oidcAuth.userProfile[`urn:zitadel:iam:org:project:${zitadelConfig.project_resource_id}:roles`] as Array<any>
+            const roles = oidcAuth.userProfile[`urn:zitadel:iam:org:project:${zitadelConfig.project_resource_id}:roles`] as Array<Record<string, unknown>>
             if (!roles) {
                 return false
             }
             
             if (Array.isArray(roles)) {
-                return roles.find(r => r[role]);
+                return !!roles.find(r => r[role]);
             } else {
                 return Object.keys(roles).some(key => key === role);
             }

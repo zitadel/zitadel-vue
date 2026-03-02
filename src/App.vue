@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
@@ -11,32 +11,24 @@ import HelloWorld from './components/HelloWorld.vue'
       src="@/assets/logo.svg"
       width="125"
       height="125"
-    >
+    />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">
-          Home
-        </RouterLink>
-        <RouterLink to="/about">
-          About
-        </RouterLink>
-        <RouterLink to="/login">
-          Login
-        </RouterLink>
-        <RouterLink
-          v-if="$zitadel.hasRole('admin')"
-          to="/admin"
-        >
+        <RouterLink to="/"> Home </RouterLink>
+        <RouterLink to="/about"> About </RouterLink>
+        <RouterLink to="/login"> Login </RouterLink>
+        <RouterLink v-if="$zitadel.hasRole('admin')" to="/admin">
           Admin
         </RouterLink>
         <a
           v-if="$zitadel.oidcAuth.isAuthenticated"
           href="#"
           @click.prevent="$zitadel.oidcAuth.signOut"
-        >Signout</a>
+          >Signout</a
+        >
       </nav>
     </div>
   </header>

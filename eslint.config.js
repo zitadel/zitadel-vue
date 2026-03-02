@@ -1,14 +1,12 @@
 import pluginVue from 'eslint-plugin-vue'
+import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
 export default [
-    // add more generic rulesets here, such as:
-    // js.configs.recommended,
-    ...pluginVue.configs['flat/recommended'],
-    // ...pluginVue.configs['flat/vue2-recommended'], // Use this if you are using Vue.js 2.x.
     {
-        rules: {
-            // override/add rules settings here, such as:
-            // 'vue/no-unused-vars': 'error'
-        }
-    }
+        ignores: ['dist/**', 'node_modules/**'],
+    },
+    ...pluginVue.configs['flat/recommended'],
+    ...vueTsEslintConfig(),
+    skipFormatting,
 ]

@@ -1,28 +1,36 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    commit-message:
-      prefix: "chore"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
-    groups:
-      example:
-        patterns:
-        - "*"
-    reviewers:
-      - peintnermax
-      - skewis6
-  - package-ecosystem: "npm"
-    directory: "/lib"
+      interval: 'weekly'
     commit-message:
-      prefix: "fix"
+      prefix: 'chore(deps):'
+    open-pull-requests-limit: 10
     groups:
-      lib:
+      npm-version-updates:
         patterns:
-        - "*"
+          - '*'
+        applies-to: 'version-updates'
+      npm-security-updates:
+        patterns:
+          - '*'
+        applies-to: 'security-updates'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "daily"
-    reviewers:
-      - peintnermax
-      - skewis6
+      interval: 'weekly'
+    commit-message:
+      prefix: 'chore(deps):'
+    open-pull-requests-limit: 10
+    groups:
+      actions-version-updates:
+        patterns:
+          - '*'
+        applies-to: 'version-updates'
+      actions-security-updates:
+        patterns:
+          - '*'
+        applies-to: 'security-updates'
+

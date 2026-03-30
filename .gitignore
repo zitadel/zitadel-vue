@@ -403,3 +403,12 @@ FodyWeavers.xsd
 
 # Local Environment Variables
 .env.local
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Yarn cache
+.yarn/
+
+# npm cache
+.npm/

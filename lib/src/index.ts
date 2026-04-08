@@ -3,5 +3,5 @@ export {
   handleCallback,
   handleSignoutCallback,
   startup,
-} from "./zitadelAuth";
-export type { ZITADELConfig, ZITADELAuth } from "./zitadelAuth";
+} from "./zitadelAuth.js";
+export type { ZITADELConfig, ZITADELAuth } from "./zitadelAuth.js";

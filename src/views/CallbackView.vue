@@ -13,8 +13,11 @@ export default defineComponent({
   async mounted() {
     try {
       const user = await handleCallback(zitadelAuth);
+      // Fall back to "/" rather than "/login" — "/login" is itself a
+      // protected route, so defaulting to it would bounce the user back
+      // through signinRedirect in an infinite loop on a stateless callback.
       const returnTo =
-        (user.state as { returnTo?: string })?.returnTo ?? "/login";
+        (user.state as { returnTo?: string })?.returnTo ?? "/";
       this.$router.push(returnTo);
     } catch (err) {
       console.error("Sign-in callback failed", err);

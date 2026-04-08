@@ -1,6 +1,6 @@
 import { UserManager, WebStorageStateStore, User } from "oidc-client-ts";
 import type { UserManagerSettings } from "oidc-client-ts";
-import { reactive } from "vue";
+import { reactive, markRaw } from "vue";
 import type { Router } from "vue-router";
 
 export interface ZITADELConfig {
@@ -61,7 +61,9 @@ export function createZITADELAuth(
   });
 
   function updateState(user: User | null) {
-    state.user = user;
+    // markRaw prevents Vue from deep-proxying the oidc-client-ts User class
+    // instance (which has getters/setters and methods like toStorageString()).
+    state.user = user ? markRaw(user) : null;
     state.isAuthenticated = user != null && !user.expired;
     state.userProfile = user?.profile ?? {};
   }
@@ -146,6 +148,10 @@ export async function handleSignoutCallback(
 
 export async function startup(auth: ZITADELAuth): Promise<boolean> {
   try {
+    // getUser() loads the user silently (no event). Re-raise the userLoaded
+    // event so the reactive state in createZITADELAuth picks it up. This sets
+    // up an additional access-token-expiring timer, which is harmless once at
+    // startup.
     const user = await auth.userManager.getUser();
     if (user && !user.expired) {
       await auth.userManager.events.load(user);

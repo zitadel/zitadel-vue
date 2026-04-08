@@ -24,7 +24,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   computed: {
     user() {
-      return this.$zitadel.oidcAuth.userProfile;
+      return this.$zitadel.userProfile;
     },
     claims() {
       if (this.user) {

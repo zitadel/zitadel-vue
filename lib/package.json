@@ -1,7 +1,7 @@
 {
   "name": "@zitadel/vue",
   "version": "0.0.0-development",
-  "description": "Wraps vue-oidc-client to provide a simple interface for ZITADEL",
+  "description": "Vue plugin for ZITADEL authentication using oidc-client-ts",
   "homepage": "https://zitadel.com/docs/examples/login/vue",
   "bugs": {
     "url": "https://github.com/zitadel/zitadel-vue/issues"
@@ -29,7 +29,11 @@
   "author": "Elio Bischof, <elio@zitadel.com>",
   "license": "MIT",
   "dependencies": {
-    "vue-oidc-client": "^1.0.0-alpha.5"
+    "oidc-client-ts": "^3.2.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
   },
   "devDependencies": {
     "typescript": "^5.5.4"

@@ -16,10 +16,15 @@ const router = createRouter({
       component: () => import("../views/AboutView.vue"),
     },
     {
+      path: "/auth/callback",
+      name: "callback",
+      component: () => import("../views/CallbackView.vue"),
+    },
+    {
       path: "/login",
       name: "login",
       meta: {
-        authName: zitadelAuth.oidcAuth.authName,
+        requiresAuth: true,
       },
       component: () => import("../views/LoginView.vue"),
     },
@@ -27,7 +32,7 @@ const router = createRouter({
       path: "/admin",
       name: "admin",
       meta: {
-        authName: zitadelAuth.oidcAuth.authName,
+        requiresAuth: true,
       },
       component: () => {
         if (zitadelAuth.hasRole("admin")) {
@@ -39,6 +44,6 @@ const router = createRouter({
   ],
 });
 
-zitadelAuth.oidcAuth.useRouter(router);
+zitadelAuth.useRouter(router);
 
 export default router;

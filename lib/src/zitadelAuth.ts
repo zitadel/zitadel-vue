@@ -71,7 +71,10 @@ export function createZITADELAuth(
   userManager.events.addUserLoaded(updateState);
   userManager.events.addUserUnloaded(() => updateState(null));
   userManager.events.addSilentRenewError(() => updateState(null));
-  userManager.events.addAccessTokenExpired(() => updateState(null));
+  // Intentionally NOT subscribing to addAccessTokenExpired: that timer fires
+  // independently of silent renewal, so flipping state to "logged out" here
+  // would briefly flash the UI to a signed-out state while a silent renew is
+  // already in flight. userUnloaded + silentRenewError cover the real cases.
 
   const auth: ZITADELAuth = {
     userManager,

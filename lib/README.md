@@ -23,8 +23,10 @@ Authenticate your [ZITADEL](https://zitadel.com) users within your Vue applicati
 ## Installation
 
 ```sh
-npm install @zitadel/vue oidc-client-ts vue vue-router
+npm install @zitadel/vue vue vue-router
 ```
+
+`oidc-client-ts` ships transitively as a regular dependency of `@zitadel/vue`, so you do not need to install it yourself.
 
 ## Usage
 

@@ -34,12 +34,23 @@ const router = createRouter({
       meta: {
         requiresAuth: true,
       },
-      component: () => {
-        if (zitadelAuth.hasRole("admin")) {
-          return import("../views/AdminView.vue");
+      // The lazy component: () => import(...) function is cached for the
+      // lifetime of the router after its first call, so we can't put a
+      // hasRole() decision inside it — it would freeze whichever view was
+      // selected on the first navigation. Use a beforeEnter guard, which
+      // re-runs on every navigation, and redirect to /noaccess when the
+      // signed-in user does not have the admin role.
+      component: () => import("../views/AdminView.vue"),
+      beforeEnter: () => {
+        if (!zitadelAuth.hasRole("admin")) {
+          return { name: "noaccess" };
         }
-        return import("../views/NoAccessView.vue");
       },
+    },
+    {
+      path: "/noaccess",
+      name: "noaccess",
+      component: () => import("../views/NoAccessView.vue"),
     },
   ],
 });

@@ -407,8 +407,10 @@ FodyWeavers.xsd
 # TypeScript build info
 *.tsbuildinfo
 
-# Yarn cache
-.yarn/
+# Library build output
+lib/dist/
+lib/node_modules/
+lib/package-lock.json
 
 # npm cache
 .npm/

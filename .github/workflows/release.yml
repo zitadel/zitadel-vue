@@ -12,13 +12,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
-      - run: yarn
-        working-directory: ./lib
-      - run: yarn build
-        working-directory: ./lib
+          node-version: 22
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build:lib
       - name: semantic release
-        uses: cycjimmy/semantic-release-action@v3
+        uses: cycjimmy/semantic-release-action@v4
         with:
           working_directory: ./lib
         env:

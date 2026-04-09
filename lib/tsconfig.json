@@ -4,8 +4,9 @@
     "target": "es2019",
     "declaration": true,
     "outDir": "./dist",
-    "moduleResolution": "node",
-    "skipLibCheck": true
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "strict": true
   },
   "include": [
     "src/**/*"

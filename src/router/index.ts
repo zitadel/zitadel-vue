@@ -45,6 +45,7 @@ const router = createRouter({
         if (!zitadelAuth.hasRole("admin")) {
           return { name: "noaccess" };
         }
+        return true;
       },
     },
     {

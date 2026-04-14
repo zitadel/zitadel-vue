@@ -24,9 +24,9 @@ import HelloWorld from "./components/HelloWorld.vue";
           Admin
         </RouterLink>
         <a
-          v-if="$zitadel.oidcAuth.isAuthenticated"
+          v-if="$zitadel.isAuthenticated"
           href="#"
-          @click.prevent="$zitadel.oidcAuth.signOut"
+          @click.prevent="$zitadel.signOut"
           >Signout</a
         >
       </nav>

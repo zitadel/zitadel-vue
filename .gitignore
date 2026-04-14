@@ -407,8 +407,9 @@ FodyWeavers.xsd
 # TypeScript build info
 *.tsbuildinfo
 
-# Yarn cache
-.yarn/
+# Library build output
+lib/dist/
+lib/node_modules/
 
 # npm cache
 .npm/

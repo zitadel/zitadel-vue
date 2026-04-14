@@ -410,7 +410,6 @@ FodyWeavers.xsd
 # Library build output
 lib/dist/
 lib/node_modules/
-lib/package-lock.json
 
 # npm cache
 .npm/

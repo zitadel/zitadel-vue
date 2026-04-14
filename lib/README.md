@@ -117,7 +117,7 @@ interface ZITADELAuth {
   readonly userManager: UserManager;             // the underlying oidc-client-ts UserManager
   readonly isAuthenticated: boolean;             // reactive
   readonly user: User | null;                    // reactive
-  readonly userProfile: Record<string, unknown>; // reactive — id_token claims
+  readonly userProfile: Record<string, unknown>; // reactive — profile/userinfo claims
   signIn(): Promise<void>;                       // calls signinRedirect
   signOut(): Promise<void>;                      // calls signoutRedirect
   hasRole(role: string): boolean;                // checks the project roles claim

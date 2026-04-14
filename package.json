@@ -9,7 +9,7 @@
     "build:lib": "tsc --project lib/tsconfig.json",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "npm run build:lib && vue-tsc --build --force",
+    "type-check": "vue-tsc --build --force",
     "lint": "eslint --fix",
     "format": "prettier --write src/"
   },
